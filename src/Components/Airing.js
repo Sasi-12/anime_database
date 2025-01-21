@@ -1,63 +1,38 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useGlobalContext } from '../context/global'
-import styled from 'styled-components'
-import Sidebar from './Sidebar'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useGlobalContext } from '../context/global';
+import Sidebar from './Sidebar';
+import './Airing.css';
 
-function Airing({rendered}) {
-    const {airingAnime ,isSearch, searchResults} = useGlobalContext()
+function Airing({ rendered }) {
+    const { airingAnime, isSearch, searchResults } = useGlobalContext();
 
     const conditionalRender = () => {
-        if(!isSearch && rendered === 'airing'){
+        if (!isSearch && rendered === 'airing') {
             return airingAnime?.map((anime) => {
-                return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
-                    <img src={anime.images.jpg.large_image_url} alt="" />
-                </Link>
-            })
-        }else{
+                return (
+                    <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+                        <img src={anime.images.jpg.large_image_url} alt="" />
+                    </Link>
+                );
+            });
+        } else {
             return searchResults?.map((anime) => {
-                return <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
-                    <img src={anime.images.jpg.large_image_url} alt="" />
-                </Link>
-            })
+                return (
+                    <Link to={`/anime/${anime.mal_id}`} key={anime.mal_id}>
+                        <img src={anime.images.jpg.large_image_url} alt="" />
+                    </Link>
+                );
+            });
         }
-    }
+    };
 
     return (
-        <PopularStyled>
-            <div className="airing-anime">
-                {conditionalRender()}
-            </div>
+        <div className="popular">
+            <div className="airing-anime">{conditionalRender()}</div>
             <Sidebar />
-        </PopularStyled>
-    )
+        </div>
+    );
 }
 
-const PopularStyled = styled.div`
-    display: flex;
-    .airing-anime{
-        margin-top: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-left: 5rem;
-        padding-right: 0;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        grid-gap: 2rem;
-        background-color: Black;
-        border-top: 5px solid #e5e7eb;
-        a{
-            height: 500px;
-            border-radius: 7px;
-        }
-        a img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-    }
-`;
-
-export default Airing
+export default Airing;
