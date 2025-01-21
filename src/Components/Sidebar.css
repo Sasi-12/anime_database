@@ -1,0 +1,33 @@
+/* Sidebar.css */
+.sidebar {
+    margin-top: 2rem;
+    background-color: black;
+    border-top: 5px solid #e5e7eb;
+    padding-right: 5rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.sidebar .anime {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+}
+
+.sidebar .anime img {
+    width: 100%;
+    border-radius: 5px;
+    border: 5px solid #e5e7eb;
+}
+
+.sidebar .anime a {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: #27ae60;
+}
+
+.sidebar .anime a h4 {
+    font-size: 1.1rem;
+}
