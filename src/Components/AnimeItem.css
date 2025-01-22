@@ -1,0 +1,117 @@
+.anime-item {
+    padding: 3rem 18rem;
+    background-color: black;
+}
+
+.anime-title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+    background: linear-gradient(to right, #A855F7, #27AE60);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.1s ease-in-out;
+}
+
+.anime-title:hover {
+    transform: skew(-3deg);
+}
+
+.title {
+    margin: 3rem 0;
+    font-size: 2rem;
+    background: linear-gradient(to right, #A855F7 23%, #27AE60);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    margin-top: 2rem;
+    color: white;
+    line-height: 1.7rem;
+}
+
+.description button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #27AE60;
+    font-weight: 600;
+}
+
+.trailer-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trailer-con iframe {
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.details {
+    background-color: black;
+    border-radius: 20px;
+    padding: 2rem;
+    border: 5px solid #e5e7eb;
+}
+
+.detail {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.detail img {
+    border-radius: 7px;
+}
+
+.anime-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.anime-details p {
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.anime-details p span:first-child {
+    font-weight: 600;
+}
+
+.characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2rem;
+    background-color: black;
+    padding: 2rem;
+}
+
+.character {
+    padding: 0.4rem 0.6rem;
+    border-radius: 7px;
+    background-color: black;
+    transition: all 0.1s ease-in-out;
+}
+
+.character img {
+    width: 100%;
+}
+
+.character h4 {
+    padding: 0.5rem 0;
+    color: white;
+}
+
+.character p {
+    color: #27AE60;
+}
+
+.character:hover {
+    transform: translateY(-5px);
+}
