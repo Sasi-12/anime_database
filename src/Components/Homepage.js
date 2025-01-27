@@ -35,7 +35,7 @@ function Popular({ viewType }) {
                 </Link>
             ))
         ) : (
-            <p>No search results found.</p>
+            <p>No search results founds.</p>
         );
     };
 
